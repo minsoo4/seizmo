@@ -1,0 +1,52 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+
+# Local AI models and generated or source media
+models/
+*.onnx
+*.pt
+*.pth
+*.safetensors
+public/uploads/
+public/user-photos/
+public/generated-images/
+public/movie-images/
+public/celebrity-images/
+src/assets/uploads/
+src/assets/user-photos/
+src/assets/generated-images/
+src/assets/movie-images/
+src/assets/celebrity-images/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
