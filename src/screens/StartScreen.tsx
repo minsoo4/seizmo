@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { createSession } from '../api/session';
+import { useNavigate } from 'react-router';
 import Button from '../components/ui/Button';
 import './StartScreen.css';
 
@@ -15,6 +16,8 @@ function StartScreen() {
     ? '촬영 준비 중...'
     : '촬영 시작하기';
 
+  const navigate = useNavigate();
+
   async function handleCreateSession() {
     setIsLoading(true);
     setErrorMessage(null);
@@ -23,6 +26,7 @@ function StartScreen() {
       const result = await createSession();
 
       setSessionId(result.sessionId);
+      navigate('/capture');
     } catch (error) {
       console.error(error);
       setErrorMessage('촬영을 준비하지 못했습니다. 다시 시도해 주세요.');
